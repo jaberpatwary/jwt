@@ -16,6 +16,7 @@ func Routes(app *fiber.App, db *gorm.DB) {
 	AdminService := service.NewAdminService(db)
 
 	v1 := app.Group("/v1")
+	AuthRoutes(v1)
 
 	//HealthCheckRoutes(v1, healthCheckService)
 
